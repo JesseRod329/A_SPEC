@@ -1,6 +1,6 @@
 import { GoogleGenerativeAI, GenerativeModel, Part } from "@google/generative-ai";
 
-// Gemini 2.0 Flash client for agent reasoning
+// Gemini 3 Flash client for agent reasoning
 const genAI = new GoogleGenerativeAI(process.env.GOOGLE_AI_API_KEY || "");
 
 export interface AgentDecision {

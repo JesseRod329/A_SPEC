@@ -1,6 +1,6 @@
 # A_SPEC - Agentic Supply, Promotion & Exchange Center
 
-> Autonomous AI agents for independent creators and brands, powered by Gemini 2.0 Flash, Circle USDC, and Arc blockchain.
+> Autonomous AI agents for independent creators and brands, powered by Gemini 3 Flash, Circle USDC, and Arc blockchain.
 
 **Built for the Agentic Commerce on Arc Hackathon (Jan 9-24, 2026)**
 
@@ -19,7 +19,7 @@ A_SPEC deploys autonomous AI agents that handle these tasks 24/7:
 
 ### Procurement Agent
 - Monitors wholesale supplier prices in real-time
-- Makes autonomous purchase decisions using Gemini 2.0 Flash reasoning
+- Makes autonomous purchase decisions using Gemini 3 Flash reasoning
 - Executes USDC payments when price targets are met
 - Operates within strict guardrails (daily limits, max transaction size)
 
@@ -58,7 +58,7 @@ A_SPEC deploys autonomous AI agents that handle these tasks 24/7:
 │              └────────────────┬───────────────┘                  │
 │                               ▼                                  │
 │  ┌────────────────────────────────────────────────────────────┐ │
-│  │                  Gemini 2.0 Flash                          │ │
+│  │                  Gemini 3 Flash                            │ │
 │  │           (Reasoning Engine - 1M Token Context)            │ │
 │  └────────────────────────────────────────────────────────────┘ │
 └──────────────────────────────┬──────────────────────────────────┘
@@ -85,7 +85,7 @@ A_SPEC deploys autonomous AI agents that handle these tasks 24/7:
 
 | Component | Technology | Purpose |
 |-----------|------------|---------|
-| AI Brain | Gemini 2.0 Flash | Fast reasoning for financial decisions |
+| AI Brain | Gemini 3 Flash | Fast reasoning for financial decisions |
 | Payments | Circle USDC (Sandbox) | Programmable stablecoin transactions |
 | Infrastructure | Arc Platform (Testnet) | Sub-second finality, USDC-native gas |
 | Protocol | x402 | HTTP-native micropayments for agent commerce |
@@ -182,7 +182,7 @@ To enable real transactions, add your API keys to `.env.local`.
 │   ├── services/
 │   │   ├── arc.ts              # Arc wallet integration
 │   │   ├── circle.ts           # Circle USDC API
-│   │   ├── gemini.ts           # Gemini 2.0 Flash client
+│   │   ├── gemini.ts           # Gemini 3 Flash client
 │   │   └── x402.ts             # x402 payment protocol
 │   ├── components/
 │   │   ├── Dashboard.tsx       # Main dashboard
@@ -223,7 +223,7 @@ curl -X POST http://localhost:3000/api/agent \
 
 ## Key Features Demonstrated
 
-1. **Autonomous Decision Making** - Gemini 2.0 Flash analyzes data and makes financial decisions
+1. **Autonomous Decision Making** - Gemini 3 Flash analyzes data and makes financial decisions
 2. **Programmable Money** - Circle USDC enables instant, low-cost transfers
 3. **Blockchain Settlement** - Arc testnet provides sub-second transaction finality
 4. **HTTP-Native Payments** - x402 protocol for pay-per-data access
@@ -241,7 +241,7 @@ curl -X POST http://localhost:3000/api/agent \
 ## Built With
 
 - [Next.js](https://nextjs.org/) - React framework
-- [Gemini 2.0 Flash](https://ai.google.dev/) - AI reasoning engine
+- [Gemini 3 Flash](https://ai.google.dev/) - AI reasoning engine
 - [Circle USDC](https://www.circle.com/usdc) - Programmable stablecoin
 - [Arc](https://arc.network/) - High-performance blockchain
 - [x402](https://www.x402.org/) - HTTP payment protocol
@@ -264,7 +264,7 @@ MIT
 **A_SPEC** - Autonomous agents for the creator economy.
 # A_SPEC - Agentic Supply, Promotion & Exchange Center
 
-> Autonomous AI agents for independent creators and brands, powered by Gemini 2.0 Flash, Circle USDC, and Arc blockchain.
+> Autonomous AI agents for independent creators and brands, powered by Gemini 3 Flash, Circle USDC, and Arc blockchain.
 
 **Built for the Agentic Commerce on Arc Hackathon (Jan 9-24, 2026)**
 
@@ -283,7 +283,7 @@ A_SPEC deploys autonomous AI agents that handle these tasks 24/7:
 
 ### Procurement Agent
 - Monitors wholesale supplier prices in real-time
-- Makes autonomous purchase decisions using Gemini 2.0 Flash reasoning
+- Makes autonomous purchase decisions using Gemini 3 Flash reasoning
 - Executes USDC payments when price targets are met
 - Operates within strict guardrails (daily limits, max transaction size)
 
@@ -322,7 +322,7 @@ A_SPEC deploys autonomous AI agents that handle these tasks 24/7:
 │              └────────────────┬───────────────┘                  │
 │                               ▼                                  │
 │  ┌────────────────────────────────────────────────────────────┐ │
-│  │                  Gemini 2.0 Flash                          │ │
+│  │                  Gemini 3 Flash                            │ │
 │  │           (Reasoning Engine - 1M Token Context)            │ │
 │  └────────────────────────────────────────────────────────────┘ │
 └──────────────────────────────┬──────────────────────────────────┘
@@ -349,7 +349,7 @@ A_SPEC deploys autonomous AI agents that handle these tasks 24/7:
 
 | Component | Technology | Purpose |
 |-----------|------------|---------|
-| AI Brain | Gemini 2.0 Flash | Fast reasoning for financial decisions |
+| AI Brain | Gemini 3 Flash | Fast reasoning for financial decisions |
 | Payments | Circle USDC (Sandbox) | Programmable stablecoin transactions |
 | Infrastructure | Arc Platform (Testnet) | Sub-second finality, USDC-native gas |
 | Protocol | x402 | HTTP-native micropayments for agent commerce |
@@ -446,7 +446,7 @@ To enable real transactions, add your API keys to `.env.local`.
 │   ├── services/
 │   │   ├── arc.ts              # Arc wallet integration
 │   │   ├── circle.ts           # Circle USDC API
-│   │   ├── gemini.ts           # Gemini 2.0 Flash client
+│   │   ├── gemini.ts           # Gemini 3 Flash client
 │   │   └── x402.ts             # x402 payment protocol
 │   ├── components/
 │   │   ├── Dashboard.tsx       # Main dashboard
@@ -487,7 +487,7 @@ curl -X POST http://localhost:3000/api/agent \
 
 ## Key Features Demonstrated
 
-1. **Autonomous Decision Making** - Gemini 2.0 Flash analyzes data and makes financial decisions
+1. **Autonomous Decision Making** - Gemini 3 Flash analyzes data and makes financial decisions
 2. **Programmable Money** - Circle USDC enables instant, low-cost transfers
 3. **Blockchain Settlement** - Arc testnet provides sub-second transaction finality
 4. **HTTP-Native Payments** - x402 protocol for pay-per-data access
@@ -505,7 +505,7 @@ curl -X POST http://localhost:3000/api/agent \
 ## Built With
 
 - [Next.js](https://nextjs.org/) - React framework
-- [Gemini 2.0 Flash](https://ai.google.dev/) - AI reasoning engine
+- [Gemini 3 Flash](https://ai.google.dev/) - AI reasoning engine
 - [Circle USDC](https://www.circle.com/usdc) - Programmable stablecoin
 - [Arc](https://arc.network/) - High-performance blockchain
 - [x402](https://www.x402.org/) - HTTP payment protocol

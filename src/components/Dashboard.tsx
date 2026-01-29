@@ -76,7 +76,7 @@ export default function Dashboard() {
               Arc Testnet
             </span>
             <span className="px-3 py-1 bg-aspec-blue/20 text-aspec-blue text-xs rounded-full">
-              Gemini 2.0 Flash
+              Gemini 3 Flash
             </span>
           </div>
         </div>
@@ -123,7 +123,7 @@ export default function Dashboard() {
       <footer className="mt-12 text-center text-white/30 text-sm">
         <p>Built for Agentic Commerce on Arc Hackathon 2026</p>
         <p className="mt-1">
-          Powered by Gemini 2.0 Flash | Circle USDC | Arc Blockchain | x402 Protocol
+          Powered by Gemini 3 Flash | Circle USDC | Arc Blockchain | x402 Protocol
         </p>
       </footer>
     </div>

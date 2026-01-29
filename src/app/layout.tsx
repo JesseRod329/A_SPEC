@@ -6,7 +6,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "A_SPEC - Agentic Supply, Promotion & Exchange Center",
-  description: "Autonomous agent system for independent creators and brands. Powered by Gemini 2.0 Flash, Circle USDC, and Arc blockchain.",
+  description: "Autonomous agent system for independent creators and brands. Powered by Gemini 3 Flash, Circle USDC, and Arc blockchain.",
 };
 
 export default function RootLayout({
