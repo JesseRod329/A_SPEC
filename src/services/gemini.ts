@@ -26,6 +26,8 @@ export interface InfluencerEvaluation {
 
 class GeminiService {
   private model: GenerativeModel;
+  private maxRetries = 3;
+  private baseDelayMs = 1000;
 
   constructor() {
     this.model = genAI.getGenerativeModel({
@@ -37,6 +39,27 @@ class GeminiService {
         maxOutputTokens: 2048,
       }
     });
+  }
+
+  private async generateWithRetry(content: Part[]): Promise<string> {
+    for (let attempt = 0; attempt <= this.maxRetries; attempt++) {
+      try {
+        const result = await this.model.generateContent(content);
+        return result.response.text();
+      } catch (error: unknown) {
+        const isLastAttempt = attempt === this.maxRetries;
+        if (isLastAttempt) {
+          throw error;
+        }
+        const delayMs = this.baseDelayMs * Math.pow(2, attempt);
+        console.warn(
+          `Gemini API call failed (attempt ${attempt + 1}/${this.maxRetries + 1}), retrying in ${delayMs}ms:`,
+          error instanceof Error ? error.message : error
+        );
+        await new Promise(resolve => setTimeout(resolve, delayMs));
+      }
+    }
+    throw new Error("Unreachable");
   }
 
   async analyzeProcurementDecision(
@@ -77,12 +100,11 @@ Only respond with the JSON, no other text.
 `;
 
     try {
-      const result = await this.model.generateContent([
+      const response = await this.generateWithRetry([
         { text: systemPrompt },
         { text: userPrompt }
       ]);
 
-      const response = result.response.text();
       const jsonMatch = response.match(/\{[\s\S]*\}/);
 
       if (jsonMatch) {
@@ -139,12 +161,11 @@ Only respond with the JSON, no other text.
 `;
 
     try {
-      const result = await this.model.generateContent([
+      const response = await this.generateWithRetry([
         { text: systemPrompt },
         { text: userPrompt }
       ]);
 
-      const response = result.response.text();
       const jsonMatch = response.match(/\{[\s\S]*\}/);
 
       if (jsonMatch) {
@@ -168,12 +189,10 @@ Only respond with the JSON, no other text.
 
   async generateThought(context: string): Promise<string> {
     try {
-      const result = await this.model.generateContent([
+      return await this.generateWithRetry([
         { text: "You are A_SPEC, an autonomous commerce agent. Generate a brief internal thought (1-2 sentences) about your current task." },
         { text: context }
       ]);
-
-      return result.response.text();
     } catch (error) {
       return "Processing...";
     }
